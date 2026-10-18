@@ -1,0 +1,1776 @@
+ html,body{
+  text-align: right;
+  font-family: 'cairo', sans-serif !important;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+input, textarea, button{
+  font-family: 'cairo', sans-serif !important;
+  text-align: right;
+}
+
+.home-container { width: 100%; font-family: sans-serif; }
+
+
+.main-header {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 20px !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+
+
+  width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 5px !important;
+  flex-wrap: nowrap !important;
+  
+}
+
+
+header.main-header {
+    
+    position: fixed !important;                              /* يفضل تعمله Fixed عشان يفضل فوق الصورة دايماً */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;                                /* عشان يفضل فوق أي حاجة */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 60px !important;
+    padding: 0 10px !important;
+   /* box-sizing: border-box !important;*/
+   
+}
+
+/* عشان اللينكات تكون واضحة فوق الصورة الشفافة */
+
+
+/* القائمة اللي جواها الروابط عشان تكون أفقية جنب بعض تماماً */
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  flex-wrap: nowrap !important;
+  background-color: transparent !important;
+  margin-right: 5px;
+
+}
+.nav-links:hover{text-shadow:0 0 8px #bb86fc, 0 0 15px #bb86fc; }
+
+.nav-links a {
+  text-decoration: none !important;
+  color:blueviolet !important;
+  font-weight: bold !important;
+  font-size: 30px !important;
+  white-space: nowrap !important;
+  background-color: transparent !important;
+   
+
+
+}
+ .nav-links a:hover{text-shadow:0 0 8px #bb86fc, 0 0 15px #bb86fc;}
+
+
+/* تصغير اللوجو */
+ 
+.logo-img {
+  height: 50px !important;
+  width: auto !important;
+  object-fit: contain !important;
+   margin-right: 30px;
+  
+
+}
+
+/* تصغير الأزرار (القائمة الرئيسية وتسجيل الخروج) لتكون عادية ومناسبة للشاشة */
+.dropdown-toggle-btn {
+  background-color: #f1f1f1 !important;
+  color: #333 !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  white-space: nowrap !important;
+   
+}
+
+.logout-btn {
+  background-color: #ff4d4d !important;
+  color: white !important;
+  border: none !important;
+  padding: 5px 8px !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  white-space: nowrap !important;
+  
+}
+
+/* حاوية القائمة المنسدلة */
+.custom-dropdown-container {
+  position: relative !important;
+  display: inline-block !important;
+  margin-left: 30px;
+}
+
+/* خلفية شفافة ومزغللة للقائمة المنسدلة بالكامل */
+.custom-dropdown-menu {
+  position: absolute !important;
+  display: inline-block !important;
+  left: 0 !important;
+  top: 100% !important;
+  background-color: rgba(255, 255, 255, 0.75) !important; /* درجة الشفافية */
+  backdrop-filter: blur(12px) !important; /* تأثير الزجاج المزغلل */
+  -webkit-backdrop-filter: blur(12px) !important;
+  min-width: 160px !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px !important;
+  z-index: 9999 !important;
+  margin-top: 4px !important;
+  padding: 6px 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* تنسيق العناصر جوه القائمة وبدون خلفية بيضاء صلبة */
+.custom-dropdown-menu div {
+  background-color: transparent !important;
+  padding: 10px 16px !important;
+  text-decoration: none !important;
+  color: #333 !important;
+  font-size: 13px !important;
+  text-decoration: none;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: background-color 0.2s ease !important;
+}
+
+/* تأثير خفيف عند المرور بالماوس على العنصر */
+.custom-dropdown-menu div:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* لو الصفحة بتبدأ بـ div لها كلاس معين يملى الصفحة كلها */
+
+/*.hero-banner{
+  display:flex ;
+  justify-content :center ;
+  align-items: center;
+  object-fit: cover;
+   margin-left: 45px;
+   
+}
+.hero-banner img { width:2000px; height: 410px; object-fit: cover;border-radius: px;margin-right:40px;  object-position:center 85%;}  الخاصيه الاخيره ديت عشان تتحكم فى انهى حته فى الصورة عايزها تظهر*/
+.categories-section { display: flex; justify-content: center; gap: 30px; padding: 40px; }
+.card { width: 40%; transition: transform 0.3s; }
+.card img { width:100px; height: 150px ; object-fit:cover ;border-radius: 10px; display: block;margin-top: 150px  ;}
+
+
+/* تنسيق قسم الـ Featured بالكامل */
+.featured-products {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* تنسيق العنوان */
+.featured-products h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color:#018786;
+}
+
+/* الحاوية اللي بتجمع الفيديو والزراير في النص */
+.home-products-grid {
+  display: flex;
+  flex-direction: column; /* بيخلي الفيديو فوق والزراير تحته */
+  align-items: center;    /* بيسنتر كل حاجة في النص بالعرض */
+  gap: 20px;              /* مسافة بين الفيديو والزراير */
+  max-width: 700px;       /* عرض مناسب للفيديو */
+  margin: 0 auto;         /* سنتر الحاوية في الصفحة */
+}
+
+/* تنسيق الفيديو */
+.home-products-grid video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* حاوية الأزرار عشان تظهر جنب بعضها تحت الفيديو */
+.video-buttons-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+/* شكل الأزرار */
+.video-buttons-container button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.video-buttons-container button:hover {
+  background-color: #444;
+}
+/* تنسيق صفحة الـ Men */
+.men-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #000;
+  
+  
+}
+
+.men-page-container h1{
+  padding-top: 100px !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    box-sizing: border-box !important;
+   font-weight: bold;
+   color: #333;
+    font-size: 2rem;
+
+}
+.men-page-container{
+  width: 100%;
+  min-height: 100vh;
+  background-image:  url('./assets/men.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  background-size: cover;
+    
+    box-sizing: border-box;
+    padding-bottom: 50px; 
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* شبكة عرض المنتجات */
+.men-products-grid {
+ grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /*   الخاصيه ديت عشان يتعرض تلقائى فى الفون بالطول وفى البى سي بالعرض*/
+  padding: 10px; /*  تعمل مسافة او هوامش بي الكارت والشاشة*/
+  justify-items: center; /*  تظبط الصورة فى النص*/
+  gap: 30px;
+  padding: 10px;
+   top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: grid !important; /*grid:عرض بالطول flex:عرض بالعرض */
+    justify-content: space-evenly !important; /* بيوزع اللوجو والروابط والقائمة على أطراف الشاشة */
+    align-items: center !important; /* بيخلي كل العناصر في منتصف الخط الرأسي */
+    background: transparent !important; /* شفاف عشان الصورة تبان تحته */
+    z-index: 1 !important;
+     position:flex !important;
+     margin-left: auto !important;
+    margin-right: auto !important;
+   border: 0px solid #eee; /* ده الخط الى حولين الصورة*/
+   text-align: center;
+  transition: transform 0.3s ease;
+  background-color:#fff;
+  border-radius: 8px;
+ 
+}
+
+/* شكل كارت المنتج */
+
+
+
+
+.men-products-grid:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.men-products-grid img {
+  width: 100%;
+  height: 200px; /* طول ثابت عشان الكروت تكون متساوية */
+  object-fit: cover; /* عشان الصورة تتظبط من غير ما تتقص بشكل وحش */
+  border-radius: 4px;
+ justify-content:center;
+ margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+.men-products-grid h3 {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+  
+}
+
+.men-products-grid p {
+  color: #888;
+  font-weight: bold;
+}
+
+.women-page-container{
+width: 100%;
+  min-height: 100vh;
+  background-image:  url('./assets/im.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  
+    box-sizing: border-box;
+    padding-bottom: 50px; 
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+}
+
+
+/*.women-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}*/
+
+.women-page-container h1{
+  padding-top: 100px !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+     
+   font-weight: bold;
+   color: #333;
+    font-size: 2rem;
+
+}
+
+/* شبكة عرض المنتجات */
+ .women-products-grid {
+
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /*   الخاصيه ديت عشان يتعرض تلقائى فى الفون بالطول وفى البى سي بالعرض*/
+  padding: 10px; /*  تعمل مسافة او هوامش بي الكارت والشاشة*/
+  justify-items: center; /*  تظبط الصورة فى النص*/
+  gap: 30px;
+  padding: 10px;
+   top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: grid !important; /*grid:عرض بالطول flex:عرض بالعرض */
+    justify-content: space-evenly !important; /* بيوزع اللوجو والروابط والقائمة على أطراف الشاشة */
+    align-items: center !important; /* بيخلي كل العناصر في منتصف الخط الرأسي */
+    background: transparent !important; /* شفاف عشان الصورة تبان تحته */
+    z-index: 1 !important;
+     position:flex !important;
+     margin-left: auto !important;
+    margin-right: auto !important;
+    border: 0px solid #eee; /* ده الخط الى حولين الصورة*/
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color:#fff;
+  border-radius: 8px;
+ 
+}
+/*.women-products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+    background: transparent !important;
+    position: relative !important;
+    z-index: 1 !important;
+}*/
+
+
+
+
+  
+ 
+
+.women-products-grid:hover {
+   transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.women-products-grid img {
+  
+  width: 100%;
+  height: 200px; /* طول ثابت عشان الكروت تكون متساوية */
+  object-fit: cover; /* عشان الصورة تتظبط من غير ما تتقص بشكل وحش */
+  border-radius: 4px;
+   
+
+  /*margin-lift  زق الصورة ناحية الشمال */
+  /* display : flex  ضرورى عشان الباقى يشتغل */
+  /* margin :auto عشان تستنر الصورة فى نص للكارت */
+  justify-content:center;
+  margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.women-products-grid h3 {
+  text-align: center!important;
+  margin: 15px  10px; /* تبعد الكلام عن العنوان*/
+  font-size: 1.1rem; /* حجم الخط*/
+ /* margin-right: 30px
+  
+ /* padding-left:   زق الكلام ناحية اليمين*/;
+ /* text-align:  هتحط الكلام فين فى الصفحة*/;
+ /* margin-left:   زق الكلام شمال سنة*/;
+}
+
+.women-products-grid p {
+  color: #888;
+  font-weight: bold;
+  text-align: center !important;
+ 
+
+}
+
+
+
+
+
+@media (min-width: 768px)  {
+
+ 
+ 
+  /* دي القاعدة العامة لكل الكروت في الكمبيوتر */
+  .categories-section .card {
+    width: 250px; 
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap:1px;
+    margin-top: -20px;
+    
+  }
+   .categories-section .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+   }
+  
+  .card img{
+    width: 300px; height:390px ;  
+  }
+  
+
+  /* هنا بقى اللعب في كل كارت على حدة */
+  
+  /* الكارت الأول (الستات - حسب ترتيبك في الـ JSX) */
+  .categories-section .card:nth-child(1) {
+    margin-right: 50px;
+    
+      /* لون مميز للستات */
+    /* تقدر تضيف أي حاجة تانية هنا، مثلاً عرض مختلف */
+    
+        
+  }
+
+  /* الكارت الثاني (الرجالة - حسب ترتيبك في الـ JSX) */
+  .categories-section .card:nth-child(2) {
+    border:  /* لون مميز للرجالة */
+    /* تقدر تضيف هنا مثلاً margin-top لو عايز تنزل الكارت ده شوية */
+  }
+}
+
+
+  .card {
+    width: 250px;            /* عرض ثابت ومناسب للكارت في الكمبيوتر */
+  }
+
+
+/* هذا التنسيق يطبق على شاشات الهاتف */
+@media (max-width: 767px) {
+  .categories-section {
+    flex-direction: row;  /* الكروت جنب بعض في الموبايل */
+    align-items: center;
+  }
+  /*.hero-banner img { width: 500px; height: 220px; object-fit: cover;border-radius: px;margin-right:50px;  object-position:center 85%;} /* الخاصيه الاخيره ديت عشان تتحكم فى انهى حته فى الصورة عايزها تظهر*/
+.card img { width:100px; height: 150px ; object-fit:cover ;border-radius: 10px; display: block;}
+.main-header { display: flex; align-items: center; padding: 20px; justify-content:center;margin-left: 5px    ;  }
+.logo-img {    width: 40px; height:25px; margin-right:10px ; }
+.nav-links { display: flex; gap: 10px; font-weight: bold;margin-left: 8px;font-size:10px;}
+
+
+
+}
+
+/* تنسيق الحاوية الرئيسية */
+/* تنسيق الحاوية الرئيسية */
+/* الحاوية الأساسية لتوزيع الصورة شمال والتفاصيل يمين */
+.product-details {
+ 
+width: 100%;
+  min-height: 100vh;
+  background-image:   linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('./assets/im.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    padding-bottom: 50px; 
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: grid;
+    gap: 50px;
+    margin: 0 auto;
+    align-items: start;
+    padding: 40px;
+    grid-template-columns: 1fr 1fr;
+    
+
+ 
+}
+
+
+/* تنسيق صورة المنتج */
+.product-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-top: 160px;
+  margin-right: 340px;
+  width: 100% !important;
+    max-width: 460px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+    object-fit: cover !important;
+  
+  
+}
+.product-image {
+    flex: 0 0 400px !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+/* تنسيق قسم المعلومات */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* بيخلي كل عنصر تحته مسافة منظمة ومش لازقين في بعض */
+ margin-top: 150px;
+   color: #ffffff !important;
+   flex: 0 0 480px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 00px !important;
+   border-radius: 20px !important;
+    color: #ffffff !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    box-sizing: border-box !important;
+}
+
+.product-info h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  margin-top: 20px;
+}
+.product-info p{
+  
+  color: #ffffff !important;
+  margin-top: -20px;
+  font-size: larger ;
+  font-weight:normal;
+}
+
+.product-info .price {
+  font-size: 1.5rem;
+  
+  font-weight: bold;
+   margin-top: -20px;
+}
+.product-info button {
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    transition: 0.3s !important;
+}
+
+.product-info button:hover {
+    background: #e0e0e0 !important;
+}
+.tabs-navigation {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  border-bottom: 1px solid  #ccc;
+    color: #ffffff !important;
+  padding-bottom: 10px;
+  display: flex !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+}
+
+.tabs-navigation button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff !important;
+
+  padding: 5px 10px;
+  flex: 1 !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+}
+
+
+/* عشان الزرار اللي تدوس عليه يبان مميز */
+.tabs-navigation button:hover {
+  text-decoration: underline;
+}
+
+/* تنسيق منطقة المحتوى */
+.content-display {
+  margin-top: 15px;
+  padding: 10px;
+    color: #ffffff !important;
+  line-height: 1.6;
+  white-space: pre-line; /* ده اللي بيشغل الـ \n بتاعك */
+  background: rgba(0, 0, 0, 0.3) !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+
+}
+
+
+/* تنسيق تجاوبي للموبايل عشان ينزلوا تحت بعض برواقة */
+@media (max-width: 768px) {
+  .product-details {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  min-height: 100vh;
+  background-image:   linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('./assets/im.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    padding-bottom: 50px; 
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: grid;
+    gap: 50px;
+    margin: 0 auto;
+    align-items: start;
+    padding: 40px;
+  }
+
+  
+  .product-image img {
+    max-width: 100%;
+    width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-top: 40px;
+  margin-right: 0px !important;
+  width: 100% !important;
+    max-width: 460px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0) !important;
+    object-fit: cover !important;
+
+  }
+
+  .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* بيخلي كل عنصر تحته مسافة منظمة ومش لازقين في بعض */
+ margin-top: 0px;
+   color: #ffffff !important;
+}
+
+.product-info h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  margin-top: 20px;
+} 
+ 
+.product-info p{
+  
+  color: #ffffff !important;
+  margin-top: -20px;
+  font-size: larger ;
+  font-weight:normal;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+
+}
+.product-info button {
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    transition: 0.3s !important;
+    font-size: 14px !important;
+}
+
+.product-info button:hover {
+    background: #e0e0e0 !important;
+}
+
+
+
+ }
+
+
+
+
+
+
+/* ظبط الـ Container العام للسلة عشان يبقى محدود في النص وما يفرش لآخر الشاشة */
+.cart-container {
+    width: 100%;
+    min-height: 100vh;
+   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./assets/im.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    justify-content:center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+   
+    margin: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    
+    
+}
+
+
+
+/* ظبط عناصر المنتج جوه الكونتستنر */
+.cart-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* بيخليهم يبدأوا جنب بعض مترتبين */
+    gap: 30px !important; /* مسافة ثابتة ومرتبة بين اسم المنتج، السعر، العدد، والأزرار */
+    padding: 25px 35px !important;
+    background: #ffffff !important;
+    margin-bottom: 12px !important;
+    border-radius: 10px !important;
+    border-bottom: none !important;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    display: flex;
+  flex-direction: row;
+  gap: 15px; /* بيخلي كل عنصر تحته مسافة منظمة ومش لازقين في بعض */
+ /*margin-top: 150px;*/
+   color: #ffffff !important;
+   flex: 0 0 480px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    /*padding: 00px !important;*/
+   border-radius: 20px !important;
+    color: #ffffff !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 30px !important;
+    box-sizing: border-box !important;
+    
+}
+
+.cart-item img {
+  border-radius: 08px;
+  margin-right: 0px;
+  height: 100px;
+  width: 80px !important;
+  object-fit: cover;
+}
+
+
+.cart-item button {
+  background-color: #ff4d4d; /* لون أحمر شيك للحذف */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom:10px ;
+}
+
+.cart-item button:hover {
+  background-color: #cc0000;
+}
+
+.cart-total h3 {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #333;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  margin-top: 20px;
+
+
+
+}
+.cart-container h2{
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  margin-top: 80px;
+
+}
+.cart-item p{
+
+ color: #ffffff !important;
+  margin-top: -20px;
+  font-size: larger ;
+  font-weight:normal;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+}
+
+/* عشان الموبايل */
+@media (max-width: 600px) {
+  .cart-container { padding: 10px; }
+  .cart-item {  text-align: center;
+  
+   display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* بيخليهم يبدأوا جنب بعض مترتبين */
+    gap: 30px !important; /* مسافة ثابتة ومرتبة بين اسم المنتج، السعر، العدد، والأزرار */
+    padding: 25px 35px !important;
+    background: #ffffff !important;
+    margin-bottom: 12px !important;
+    border-radius: 10px !important;
+    border-bottom: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    display: flex;
+  flex-direction: column;
+  gap: 15px; /* بيخلي كل عنصر تحته مسافة منظمة ومش لازقين في بعض */
+ /*margin-top: 150px;*/
+   color: #ffffff !important;
+   flex: 0 0 480px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    /*padding: 00px !important;*/
+   border-radius: 20px !important;
+    color: #ffffff !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    box-sizing: border-box !important;
+    
+  
+  
+  
+  
+  
+  }
+  .cart-total h3{
+  margin-top:30px;
+  padding-top: 20px;
+  border-top: 2px solid #333;
+  text-align: left;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  margin-right:0px;
+  margin-top: 20px;
+
+  }
+
+  
+}
+
+/* تنسيق الحاوية الرئيسية */
+.checkout-container {
+  display: flex;
+  flex-direction: row; /* عشان الفورم والملخص يبقوا جنب بعض */
+  gap: 40px;
+ /* max-width: 900px;*/
+/*  margin: 50px auto;*/
+  padding: 20px;
+
+  width: 100%;
+    min-height: 100vh;
+   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./assets/im.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    justify-content:center !important;
+    
+      margin: 0 !important;
+    align-items: center !important;
+   
+    
+    
+    box-sizing: border-box !important;
+
+}
+.checkout-container h2{
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  margin-top: 80px;
+}
+
+/* تنسيق الفورم */
+form {
+ flex: 1 !important;
+    max-width: 450px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 30px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column!important;
+}
+
+form input {
+  width: 100% !important;
+    padding: 12px 15px !important;
+    margin-bottom: 15px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+}
+  form input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+ }
+  form label {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+ }
+
+
+form button {
+ width: 100% !important;
+    padding: 14px !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    transition: 0.3s ease !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+form button:hover {
+ background-color: #f0f0f0 !important;
+    transform: translateY(-2px) !important;
+}
+
+
+/* تنسيق ملخص الطلب */
+.order-summary {
+  flex: 1 !important;
+    max-width: 450px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 30px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+    color: #ffffff !important;
+   
+}
+/* تنسيق خاص بالطباعة: بيحول الفاتورة لخلفية بيضاء وكتابة سوداء صريحة */
+@media print {
+  /* اخفاء أي عناصر مش مطلوبة في الفاتورة زي الـ Navbar أو الفورم لو مش عايزها تطلع في الطباعة */
+  body * {
+    visibility: hidden;
+  }
+  
+  .order-summary, .order-summary * {
+    visibility: visible;
+  }
+
+  .order-summary {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 20px !important;
+  }
+
+  /* تحويل أي نصوص أو خطوط داخل الفاتورة للون الأسود عشان تظهر بوضوح في الورقة */
+  .order-summary h3, 
+  .order-summary p, 
+  .order-summary span {
+    color: #000000 !important;
+  }
+
+  .order-summary hr {
+    border-color: #000000 !important;
+  }
+}
+
+.checkout-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* تنسيق الموبايل (عشان التصميم ميضربش) */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column; /* يقلبوا فوق بعض في الشاشات الصغيرة */
+  }
+}
+
+
+
+
+
+/* تنسيق أزرار الـ Tabs */
+
+.checkout-page { padding: 40px 20px; max-width: 1000px; margin: auto; }
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.order-summary {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  height: fit-content;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.payment-methods { margin: 20px 0; }
+.payment-methods label { display: block; margin-bottom: 10px; }
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* تنسيق الموبايل */
+@media (max-width: 768px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+}
+
+/* تنسيقات صفحة المحاسبة - Dark Mode */
+
+
+
+/* ترتيب العناصر تحت بعض داخل لوحة إدارة الفواتير */
+.manage-container .input-style {
+    display: block;   /* بيخلي كل input ياخد سطر لوحده */
+    width: 100%;      /* بياخد عرض الكارت بالكامل */
+    margin-bottom: 10px; /* مسافة بين كل انبوت والتاني */
+    padding: 8px;
+    box-sizing: border-box; /* عشان الـ padding ميبوظش العرض */
+}
+
+.manage-container button {
+    display: block;   /* الزرار ينزل في سطر لوحده */
+    width: 100%;      /* عرض الزرار بعرض الكارت */
+    margin-top: 5px;
+}
+
+.manage-container .card-style {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* تنسيق لوحة إدارة الفواتير */
+.manage-container {
+    max-width: 500px; /* بنصغر العرض عشان يبقى نموذج إدخال */
+    margin: 40px auto; /* بنحطه في نص الشاشة */
+    padding: 25px;
+   background-color: #121212 !important;
+    border-radius: 15px; /* حواف دائرية */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* ظلال احترافية */
+    color: #f0f0f0; /* لون الخط */
+    direction: rtl;
+
+
+   
+    min-height: 100vh; /* بيخلي الطول يغطي الشاشة كلها */
+    width: 100%;
+    margin: 0 !important; /* عشان نلغي أي مسافات جانبية */
+    max-width: 100% !important; /* عشان يملأ العرض بالكامل */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.manage-container h1, .manage-container h3 {
+    text-align: center;
+    color: #bb86fc; /* لون مميز للعناوين */
+}
+
+.manage-container .input-style {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    background-color: #2c2c2c; /* لون الانبوت الداخلي */
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.manage-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #03dac6; /* لون الزرار */
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+.manage-container button:hover {
+    background-color: #018786;
+}
+
+.manage-container .card-style {
+    margin-bottom: 20px;
+    border: none; /* شلنا الحدود التقليدية عشان الشكل يبقى انسيابي */
+}
+
+/* تنسيقات صفحة المحاسبة - Dark Mode */
+
+.accounting-container {
+    min-height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    direction: rtl;
+}
+.chart-wrapper {
+    background-color: #1e1e1e;
+    border: 1px solid #333 !important;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+    /* ده الكود اللي هيحبس الرسمة جوه الكارت */
+    overflow: hidden; 
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+
+
+/* تنسيق بطاقة الفاتورة */
+.invoice-card {
+   
+    background-color: #1e1e1e;
+    border: 1px solid #333 !important;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+
+    
+}
+
+
+
+.accounting-container h1 {
+    color: #bb86fc;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* الكارد اللي بيحوي الفاتورة */
+.accounting-container > div {
+    background-color: #1e1e1e;
+    border: 1px solid #333 !important;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* العنوان وزر الحذف */
+.accounting-container > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.accounting-container button {
+    background-color: #cf6679;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accounting-container button:hover {
+    background-color: #b00020;
+    color: #fff;
+}
+
+/* تنسيق الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #2c2c2c;
+}
+
+table th {
+    background-color: #333;
+    color: #03dac6;
+    padding: 12px;
+    border: 1px solid #444;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #444;
+    color: #ddd;
+}
+
+/* تذييل الجدول (الإجمالي) */
+tfoot {
+    background-color: #3700b3 !important;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* القائمة (المنتجات) */
+ul {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* الحاوية الرئيسية بتملى الشاشة وخلفية الغابات والنجوم */
+/* الحاوية الرئيسية تملى الشاشة كلها عرض وارتفاع وتتوسط المحتوى */
+/* عزل صفحة اللوجين تماماً عن أي Layout خارجي عشان تفرش الشاشة كلها */
+/* الحاوية الرئيسية تفرش الشاشة كلها وتلغي أي تقسيمات جانبية */
+/* الحاوية الرئيسية لصفحة اللوجين (بتعمل الخلفية وتسنتر الكارت في نص الشاشة بالضبط) */
+/* الحاوية الرئيسية لصفحة اللوجين (بتعمل الخلفية وتسنتر الكارت في نص الشاشة بالضبط) */
+/* الحاوية الرئيسية لصفحة اللوجين (توسيط الشاشة وخلفية الغابات الفخمة) */
+/* الصفحة بالكامل هي اللي تاخد خلفية الصورة وتملى الشاشة */
+/* الخلفية بتفرش الشاشة كلها وتجيب صورة men.webp بالغمقان المناسب */
+/* صفحة اللوجين تظهر تحت الهيدر مباشرة وتاخد باقي الشاشة */
+/* نفس ستايل الخلفية العام زي صفحة الهوم تحت الهيدر واللينكات */
+.home-page-container,
+.login-page-container {
+     width: 100%;
+    min-height: 100vh;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/hm55.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+   
+    margin: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+
+
+    
+}
+
+/* الكارت الزجاجي الوحيد في النص */
+.login-card-wrapper {
+     width: 100% !important;
+    max-width: 550px !important;
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 30px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+    /*margin-left:auto !important;
+    /*margin-right:auto !important;*/
+    margin-left: 0px;
+
+}
+
+.login-card-wrapper h2 {
+    color: #ffffff !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    font-size: 22px !important;
+}
+
+.login-form-group {
+    margin-bottom: 16px !important;
+
+
+}
+
+.login-form-group label {
+    display: block !important;
+    margin-bottom: 6px !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+
+
+}
+
+.login-form-group input {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+}
+
+.login-form-group input:focus {
+    border-color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.login-submit-btn {
+    width: 100% !important;
+    padding: 11px !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    margin-top: 10px !important;
+    transition: 0.3s !important;
+}
+
+.login-submit-btn:hover {
+    background-color: #e0e0e0 !important;
+}
+
+/* الخلفية بتفرش الشاشة كلها وتجيب صورة men.webp بالغمقان المناسب */
+/* صفحة اللوجين تظهر تحت الهيدر مباشرة وتاخد باقي الشاشة */
+/* نفس ستايل الخلفية العام زي صفحة الهوم تحت الهيدر واللينكات */
+.home-page-container,
+.register-page-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/hm55.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*position: fixed; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1;
+     justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    
+    
+}
+
+/* الكارت الزجاجي الوحيد في النص */
+.register-card-wrapper {
+    width: 100% !important;
+    max-width: 550px !important;
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 30px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+   /* margin-left:auto !important;
+    margin-right:auto !important;*/
+    margin-left: 0px;
+}
+
+
+.register-card-wrapper h2 {
+    color: #ffffff !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    font-size: 22px !important;
+}
+
+.register-form-group {
+    margin-bottom: 16px !important;
+}
+
+.register-form-group label {
+    display: block !important;
+    margin-bottom: 6px !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+}
+
+.register-form-group input {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+}
+
+.register-form-group input:focus {
+    border-color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.register-submit-btn {
+    width: 100% !important;
+    padding: 11px !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    margin-top: 10px !important;
+    transition: 0.3s !important;
+}
+
+.register-submit-btn:hover {
+    background-color: #e0e0e0 !important;
+}
+/* تخصيص لون وتنسيق الـ Placeholder لحقول الإدخال */
+.login-card-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important; /* لون أبيض شفاف ورايق، تقدر تغييره للون اللي تحبه */
+    font-size: 13px !important;
+}
+.register-card-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important; /* لون أبيض شفاف ورايق، تقدر تغييره للون اللي تحبه */
+    font-size: 13px !important;
+}
+
+
+/* لمتصفحات فايرفوكس واكسبلورر لو احتجناها */
+.login-card-wrapper input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+.register-card-wrapper input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.login-card-wrapper input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+.register-card-wrapper input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .login-card-wrapper {
+    width: 500% !important;
+    max-width:300px !important;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 30px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+    margin-left: 0px;
+}
+
+.register-card-wrapper {
+     width: 500% !important;
+    max-width:300px !important;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 30px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+    margin-left: 0px;
+}
+
+
+ 
+
+/* القائمة اللي جواها الروابط عشان تكون أفقية جنب بعض تماماً */
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: nowrap !important;
+  background-color: transparent !important;
+  
+  
+}
+.nav-links:hover{text-shadow:0 0 8px #bb86fc, 0 0 15px #bb86fc; }
+
+.nav-links a {
+  text-decoration: none !important;
+  color:blueviolet !important;
+  font-weight: bold !important;
+  font-size: 11px !important;
+  white-space: nowrap !important;
+  background-color: transparent !important;
+  
+}
+
+
+/* تصغير اللوجو */
+.main-header img.logo-img, 
+.logo-img {
+  height: 25px !important;
+  width: auto !important;
+  object-fit: contain !important;
+ 
+  
+
+}
+
+/* تصغير الأزرار (القائمة الرئيسية وتسجيل الخروج) لتكون عادية ومناسبة للشاشة */
+.dropdown-toggle-btn {
+  background-color: #f1f1f1 !important;
+  color: #333 !important;
+  padding: 5px 8px !important;
+  font-size: 11px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  white-space: nowrap !important;
+}
+
+.logout-btn {
+  background-color: #ff4d4d !important;
+  color: white !important;
+  border: none !important;
+  padding: 5px 8px !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  white-space: nowrap !important;
+}
+
+/* حاوية القائمة المنسدلة */
+.custom-dropdown-container {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+/* خلفية شفافة ومزغللة للقائمة المنسدلة بالكامل */
+.custom-dropdown-menu {
+  position: absolute !important;
+  display: inline-block !important;
+  left: 0 !important;
+  top: 100% !important;
+  background-color: rgba(255, 255, 255, 0.75) !important; /* درجة الشفافية */
+  backdrop-filter: blur(12px) !important; /* تأثير الزجاج المزغلل */
+  -webkit-backdrop-filter: blur(12px) !important;
+  min-width: 160px !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px !important;
+  z-index: 9999 !important;
+  margin-top: 4px !important;
+  padding: 6px 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* تنسيق العناصر جوه القائمة وبدون خلفية بيضاء صلبة */
+.custom-dropdown-menu div {
+  background-color: transparent !important;
+  padding: 10px 16px !important;
+  text-decoration: none !important;
+  color: #333 !important;
+  font-size: 13px !important;
+  text-decoration: none;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: background-color 0.2s ease !important;
+}
+
+/* تأثير خفيف عند المرور بالماوس على العنصر */
+.custom-dropdown-menu div:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+}
+/* لو الصفحة بتبدأ بـ div لها كلاس معين يملى الصفحة كلها */
+.home-content {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./assets/hm99.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute; /* أو fixed لو حابب تثبتها تماماً */
+    top: 0;
+    left: 0;
+    z-index: -1; /* عشان الخلفية تفضل ورا كل النصوص والعناصر وما تغطيش عليها */
+   
+
+
+
+
+    
+    
+}
+
+
+
